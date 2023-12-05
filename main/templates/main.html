@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="row">
+  {%for i in prop%}
+      <div class="col">
+        <div class="card" style="width: 18rem;margin:18px">
+            <img src="{{i.imageURL}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <h5 class="card-title">{{i.price}}</h5>
+                <p class="card-text">{{i.description}}</p>
+            </div>
+               <a href="#" class="btn btn-primary">Add to cart</a>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{% endblock%}
+
